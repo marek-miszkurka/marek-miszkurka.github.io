@@ -1,5 +1,10 @@
+<!-- <!DOCTYPE html> -->
 <html>
   <head>
+    <meta
+      name="description"
+      content="personal webpage for infuancers, etc made with tailwindcss and fontawesome"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <script
@@ -7,7 +12,26 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: '#212121',
+              fb: '#369',
+            },
+          },
+        },
+      };
+    </script>
     <style>
+      div {
+        contain: content;
+        display: grid;
+        place-items: center;
+
+        margin: auto;
+      }
       .fa-instagram {
         background: radial-gradient(
           circle at 30% 107%,
@@ -24,25 +48,12 @@
     </style>
     <title>Marek Miszkurka - Artysta, Youtuber & TikToker</title>
   </head>
-  <body class="bg-[#212121] text-[#212121] grid place-items-center">
-    <!-- <h1 class="fixed bg-white p-4 rounded-xl text-4xl top-10 rotate-[15deg]">1 425 obserwujących</h1> -->
-    <div
-      class="
-        bg-white
-        grid
-        place-items-center
-        p-6
-        rounded-xl
-        gap-4
-        w-10/12
-        md:w-auto
-        font-sans
-      "
-    >
+  <body class="bg-dark text-dark grid place-items-center">
+    <div class="bg-white p-6 rounded-xl gap-4 w-10/12 md:w-auto font-sans">
       <img
-        class="w-1/2 md:w-80 rounded-full"
+        class="w-80 rounded-full"
         src="https://scontent.fpoz4-1.fna.fbcdn.net/v/t1.6435-9/117316965_1562676160558635_9154148513523743782_n.jpg?_nc_cat=111&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=MYHNyu0WWA4AX9d_TJv&_nc_ht=scontent.fpoz4-1.fna&oh=00_AT8MLQIyR_IjqCevhgOtzpYWFSuIZo8iqqJ3K0lvK4r9qA&oe=629BBE14"
-        alt=""
+        alt="avatar_image"
       />
       <h1 class="sm:text-2xl md:text-4xl text-teal-400 p-4">
         @marek_miszkurka
@@ -50,7 +61,7 @@
       <footer class="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-4">
         <a
           href="https://www.facebook.com/marek.miszkurka.9"
-          class="fa-brands cursor-pointer text-[#369] fa-2x fa-facebook"
+          class="fa-brands cursor-pointer text-fb fa-2x fa-facebook"
         >
         </a>
         <a
@@ -75,9 +86,10 @@
           class="fa-brands cursor-pointer text-red-500 fa-2x fa-youtube"
         ></a>
       </footer>
-      <p class="fixed bottom-2 center text-[10px] text-white font-mono">
-        made with <i class="fa-solid fa-heart text-red-500"></i> by <a href="https://github.com/ParseThisCode">ParseThisCode</a>
-      </p>
     </div>
+    <p class="fixed bottom-2 center text-xs text-white font-mono">
+      made with <i class="fa-solid fa-heart text-red-500"></i> by
+      <a href="https://github.com/ParseThisCode">ParseThisCode</a>
+    </p>
   </body>
 </html>
