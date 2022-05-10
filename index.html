@@ -23,12 +23,19 @@
           },
         },
       };
+      document.addEventListener('contextmenu', (event) =>
+        event.preventDefault()
+      );
     </script>
     <style>
-      body > *,
-      div > *,
+      div,
       img {
         contain: content;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
       .fa-instagram {
         background: radial-gradient(
